@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container my-5">
+        <div class="mb-3">
+            <label for="input1" class="form-label">Email address :</label>
+            <input type="text" name="" class="form-control " id="input1" placeholder="Inter Your Email address">
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label">write a massage</label>
+            <textarea  rows="3" class="form-control" placeholder="Enter Your massage"></textarea>
+        </div>
+    </div>
+
+    <div class="container my-3">
+        <select class="form-select" name="" id="">
+            <option value="" selected>select your item</option>
+            <option value="1">one</option>
+            <option value="2">two</option>
+            <option value="3">three</option>
+        </select>
+    </div>
+
+    <div class="container my-3">
+        <div class="form-check">
+            <input type="checkbox" name="" id="chakboxid" class="form-check-input">
+            <label for="chakboxid" class="form-check-label">checkbox1</label>
+        </div>
+
+        <div class="form-check form-switch">
+            <input type="checkbox" name="" id="checkswitch" class="form-check-input">
+            <label for="checkswitch" class="form-check-label">click me</label>
+        </div>
+
+        <div>
+            <label for="rangeid" class="form-label">range</label>
+            <input type="range" name="" id="rangeid" class="form-range" min="0" max="5">
+        </div>
+    </div>
+    <div class="container">
+        <div class="input-group">
+            <span class="input-group-text">@</span>
+            <input type="text" placeholder="Username" class="form-control">
+        </div>
+        <div class="input-group">
+            <input type="text" name="" id="" placeholder="enter your email " class="form-control">
+            <span class="input-group-text">@example.com</span>
+        </div>
+    </div>
+    <div class="container">
+        <div class="form-floating">
+            <input type="text" name="" id="floating" class="form-control" placeholder="email">
+            <label for="floating">Email :</label>
+        </div>
+        <div class="form-floating">
+            <textarea class="form-control"  placeholder="text"></textarea>
+            <label for="">some text here</label>
+            
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <form action="" method="get" class="needs-validation" novalidate>
+            <div class="row my-2">
+                <div class="col-md-6">
+                    <label for="" class="form-label">Email</label>
+                    <input type="text" class="form-control" id="emialid" required>
+                    <div class="valid-feedback">
+                        <p>Looks good!</p>
+                    </div>
+                    <div class="invalid-feedback">
+                        <p>Must needed a name</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="" class="form-label">Password</label>
+                    <input type="password" class="form-control" required>
+                    <div class="valid-feedback">
+                        <p>Looks good!</p>
+                    </div>
+                    <div class="invalid-feedback">
+                        <p>Password required</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row my-2">
+                <div class="col-md-12">
+                    <label for="" class="form-label">Address </label>
+                    <input type="text" class="form-control" placeholder="1234 Main st " required>
+                    <div class="invalid-feedback">
+                       <p>Please provide a valid address.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row my-2">
+                <div class="col-md-12">
+                    <label for="" class="form-label">Address 2</label>
+                    <input type="text" class="form-control" placeholder=" Apartment, studio, or floor (optional)" >
+                    
+                </div>
+            </div>
+            <div class="row my-2">
+                <div class="col-md-6">
+                    <label for="" class="form-label">City</label>
+                    <input type="text" class="form-control" required>
+                    <div class="invalid-feedback">
+                        <p>Please provide a valid city.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label for="" class="form-label">State</label>
+                    <select name="" id="" class="form-select" required>
+                        <option value="" selected>Choose...</option>
+                        <option value="1">Dhaka</option>
+                        <option value="2">Kumilla</option>
+                        <option value="3">Madaripur</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        <p>Please select a valid state.</p>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <label for="" class="form-label">Zip</label>
+                    <input type="text" class="form-control" required>
+                    <div class="invalid-feedback">
+                        <p>Please provide a valid zip.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row my-2">
+                <div class="col-md-12">
+                    <div class="form-check form-switch">
+                        <input type="checkbox" id="formselect" class="form-check-input" required>
+                        <label for="formselect" class="form-check-label">Agree to terms and conditions</label>
+                        <div class="invalid-feedback">
+                            <p>You must agree before submitting.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-12 vstack">
+                    <button class="btn btn-primary">Sign in</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script>
+            // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (() => {
+        'use strict'
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        const forms = document.querySelectorAll('.needs-validation')
+
+        // Loop over them and prevent submission
+        Array.from(forms).forEach(form => {
+            form.addEventListener('submit', event => {
+                if (!form.checkValidity()) {
+                    event.preventDefault()
+                    event.stopPropagation()
+                }
+
+                form.classList.add('was-validated')
+            }, false)
+         })
+        })()
+    </script>
+</body>
+</html>
